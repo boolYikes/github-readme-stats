@@ -38,7 +38,10 @@ query gistInfo($gistName: String!) {
 const fetcher = async (variables, token) => {
   return await request(
     { query: QUERY, variables },
-    { Authorization: `token ${token}` },
+    {
+      Authorization: `token ${token}`,
+      "User-Agent": "github-readme-stats (cf-workers)",
+    },
   );
 };
 

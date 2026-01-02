@@ -42,6 +42,7 @@ const fetcher = (variables, token) => {
     },
     {
       Authorization: `token ${token}`,
+      "User-Agent": "github-readme-stats (cf-workers)",
     },
   );
 };
